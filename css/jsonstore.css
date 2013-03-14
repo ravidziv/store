@@ -1,0 +1,110 @@
+/******************************************************
+ *  The store css                *
+\*****************************************************/
+body {
+  font-family: "Lucida Grande", Lucida, Helvetica, Arial, sans-serif;
+  background: #FFF;
+  color: #333;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header {
+  background: #000000;
+  margin: 0px;
+  padding: 20px;
+}
+#catalog{
+  margin: 28px;
+  font-family: Inconsolata;
+  font-size: 27px;
+  
+}
+#header h1 {
+  font-family: Inconsolata, Monaco, Courier, mono;
+  color: #FFF;
+  margin: 10px;
+}
+.add{
+bottom= 10px;
+}
+
+#header .cart-info {
+  font-family: Inconsolata;
+  position: absolute;
+  top: 0px;
+  width: 110px;
+  right: 0px;
+  text-align: left;
+  padding: 10px;
+  background: #191970;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+}
+img {
+  border: 0;
+  height: 200px;
+}
+#productlistview ul {
+    list-style: none;
+}
+
+.result{
+  font-size: 22px;
+  font-weight: bold;
+  padding :10px
+
+}
+.sub{
+margin:auto;
+	width: 400px;
+	border: 1px solid #ccc;
+	margin-top: 40px;
+  padding: 50px;
+}
+.order{
+position: absolute;
+
+}
+
+.buttonReg{
+margin: 20px;
+}
+
+.item {
+  height: 300px;
+  display: border;
+  float:left;
+  width: 250px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align:center;
+  font-size: 12px;
+}
+.item-image {
+  height: 200px;
+}
+.item-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.item-price {
+  font-size: 15px;
+  padding: 5px;
+}
+.item-company {
+  font-weight: bold;
+  font-size: 15px;
+}
+.item-detail .item-image {
+  height: 200px;
+  float:left;
+}
+.item-detail .item-info {
+  padding: 100px 10px 0px 10px;
+}

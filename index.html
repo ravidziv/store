@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>
+            The store
+        </title>
+			<link rel="stylesheet" href="css/jsonstore.css" type="text/css">
+			<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>
+                    The Store
+                </h1>
+                <div class="cart-info"> </div>
+			</div>
+			<div class="sub" id="sub"></div>
+			<div id="main"> </div>
+		</div>
+		<!--The template that shows all the products -->
+	   <script id="store_index_template" type="text/x-underscore-tmplate">
+          <div id="catalog"> Product Catalog</div>
+        <ul>
+            <% for(i=0,l=products.length;i<l;++i) { p = products[i]; %>
+            <li class="item">
+              <div class="item-image">
+                  <img alt="<%= p.title %>" src="<%= p.image %>" /></a>
+              </div>
+              <div class="item-company"><%= p.company %></div>
+              <div class="item-title"><%= p.title %></div>
+              <div class="item-price">$<%= p.price %></div>
+			  <input class="add btn btn-danger" id="<%=p.id%>" type="button" value="Add to the list" data-name= "$<%=p.id%>"/>
+            </li>
+            <% } %>
+        </ul>
+		<a  type="button" class = "order btn btn-large btn-primary" href="#submit1">Order</a>
+        </script>
+		
+		<!--The templates that shows the Shopping Basket -->
+        <script id="store_cart_template" type="text/x-underscore-template">
+			<p>Items: <%= count %> ($ <%= cost %>)</p>
+        </script>
+		<script id="store_EmptyCrat_template" type="text/x-underscore-template">
+			<p>No Items in the Shopping Basket</p>
+        </script>
+	<!--The templates that shows the Booking Page -->
+	<script id="submit_template" type="text/x-underscore-template">
+		<form class="form-horizontal" id="ContactForm">
+			<div class="control-group">
+				<label class="control-label" for="inputName">Your Name</label>
+				<div class="controls">
+					<input type="text" id="name" name="name" placeholder="Name">
+				</div>		
+			</div>
+			<div class="control-group card">
+				<label class="control-label card" for="inputCardNum">Your Cradit Card number</label>
+				<div class="controls">
+					<input type="text" class= "number" id="cardNum" name="cardNum" placeholder="Cradit Card number">
+				</div>		
+			</div>
+			<div class="result">You ordered <%= count %> Items in $<%= cost %></div>
+			<div class="control-group">
+				<input type="button" id="submit" class="submit btn btn-large btn-primary buttonReg" value="Submit">
+			<div class="control-group">
+				<a href="#" type="button" class="buttonReg btn btn-inverse">&laquo; Back to Items</a>
+			</div>
+		</form>
+	</script>	
+	<!--The scripts from outside (from other files and the serever)-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script src="js/underscore.js" type="text/javascript"></script>
+    <script src="js/backbone.js" type="text/javascript"></script>
+    <script src="js/store.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+The store application -
+
+This app Simulates a store webside that allows to order Products.
+In this project i stores all the data on apache server that support mysql and php (I used wamp) .
+
+When you want to run the app you need to run first the createTheDB.php file that create the 
+DB, and tables and load to them the Products that stores in data/items.json.
+
+The createTheDB.php Connects to the server with the username - "root", the server name "localhost", 
+and the passwprd is - "".
+
+After that you jost need to run the index.html file.
+This file using the store.js javascript file.
+This js file have one basic modele - the Product.
+it represents one type of Product in our store.
+Also we have the item model that represents the ordered Product.
+
+Also we have two collections that represent a serveal of models (on for each model),
+and we have also a view for each model and collection, and a view that wrapper the all app.
+
+The DataBasedObject.php is a file that contains an object that create connection to the Server, creates 
+the dataBase, creates tables and inseres them the Initial values.
+
+The index.php file managers all the request that came from the client side.
+It contains two object, one to stores the data and the second one to make the 
+actions (Insert in our case).
+
+The getCatalog.php is a file taht loads all the data from the server and converts it to json format.
+
+ravid ziv
+
+
